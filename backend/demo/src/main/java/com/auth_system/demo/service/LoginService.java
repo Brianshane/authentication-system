@@ -1,12 +1,14 @@
 package com.auth_system.demo.service;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 import com.auth_system.demo.entity.User;
 import com.auth_system.demo.dto.LoginRequest;
 import com.auth_system.demo.dto.LoginResponse;
 import com.auth_system.demo.repository.UserRepository;
 import com.auth_system.demo.security.JwtService;
 
+@Service
 public class LoginService {
     private UserRepository userRepository;
     private PasswordEncoder passwordEncoder;

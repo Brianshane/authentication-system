@@ -3,6 +3,7 @@ package com.auth_system.demo.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.auth_system.demo.dto.LoginRequest;
 import com.auth_system.demo.dto.LoginResponse;
 import com.auth_system.demo.service.LoginService;
 
@@ -23,7 +24,7 @@ public class LoginController {
         this.loginService =loginService;
     }
     @PostMapping("/login")
-    public ResponseEntity<LoginResponse> login(@Valid @RequestBody loginRequest request)
+    public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest request)
      {
     LoginResponse response = loginService.login(request);
         
